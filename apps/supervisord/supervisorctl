@@ -1,0 +1,1 @@
+/data0/system/supervisord/supervisord -c /data0/system/supervisord/supervisord.conf ctl $@

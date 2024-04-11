@@ -1,0 +1,13 @@
+[Unit]
+Description=Supervisord service in golang
+ConditionFileIsExecutable=/data0/system/supervisord/supervisord
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/data0/system/supervisord/supervisord -c /data0/system/supervisord/supervisord.conf
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
